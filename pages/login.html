@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<style>
+		body {
+			color: white;
+			background-color: black;
+			display: flex;
+			justify-content: center;
+		}
+
+		form {
+			padding: 20px;
+			border: 1px solid white;
+			border-radius: 10px;
+		}
+
+		input {
+			padding: 5px;
+			border: 2px solid white;
+			border-radius: 5px;
+			background-color: black;
+			color: white;
+		}
+
+		#signup-button {
+			float: right;
+		}
+	</style>
+</head>
+
+<body>
+	<form action="http://localhost:8000/auth" method="post">
+		<input type="text" name="username" id="username" placeholder="username">
+		<br> <br>
+		<input type="password" name="password" id="password" placeholder="password">
+		<br> <br>
+		<input type="submit" value="Login">
+		<input type="button" value="Sign-Up" id="signup-button" onclick="window.location.href='http://localhost:8000/signup';">
+	</form>
+</body>
+
+</html>

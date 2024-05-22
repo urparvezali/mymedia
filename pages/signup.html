@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SignUp</title>
+	<style>
+		body {
+			color: white;
+			background-color: black;
+			display: flex;
+			justify-content: center;
+		}
+
+		form {
+			padding: 20px;
+			border: 1px solid white;
+			border-radius: 10px;
+		}
+
+		input,
+		select {
+			padding: 5px;
+			border: 2px solid white;
+			border-radius: 5px;
+			background-color: black;
+			color: white;
+			float: right;
+		}
+
+		label {
+			float: left;
+		}
+	</style>
+</head>
+
+<body>
+	<form action="http://localhost:8000/signup_done" method="post">
+		<label for="full_name">Full Name </label>
+		<input type="text" name="full_name" id="full_name" placeholder="full name">
+		<br> <br>
+		<label for="username">Username </label>
+		<input type="text" name="username" id="username" placeholder="username">
+		<br> <br>
+		<label for="email">Email </label>
+		<input type="email" name="email" id="email" placeholder="email">
+		<br> <br>
+		<label for="password">Password </label>
+		<input type="password" name="password" id="password" placeholder="password">
+		<br> <br>
+		<label for="gender">Gender </label>
+		<select name="gender" id="gender">
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="other">Other</option>
+		</select>
+		<br> <br>
+		<label for="phone">Phone </label>
+		<input type="tel" name="phone" id="phone" placeholder="01873574***">
+		<br><br>
+		<input type="submit" value="Done">
+	</form>
+</body>
+
+</html>
