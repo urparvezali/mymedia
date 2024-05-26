@@ -6,42 +6,40 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login</title>
 	<style>
+		* {
+			background-color: #111;
+			color: #fff;
+		}
 		body {
-			color: white;
-			background-color: black;
-			display: flex;
 			justify-content: center;
+			display: flex;
 		}
-
-		form {
+		#frm {
+			border: 1px solid #fff;
+		}
+		#username, #password {
+			border: 1px solid #fff;
 			padding: 20px;
-			border: 1px solid white;
-			border-radius: 10px;
-		}
-
-		input {
-			padding: 5px;
-			border: 2px solid white;
-			border-radius: 5px;
-			background-color: black;
-			color: white;
-		}
-
-		#signup-button {
-			float: right;
 		}
 	</style>
 </head>
 
 <body>
-	<form action="http://localhost:8000/auth" method="post">
-		<input type="text" name="username" id="username" placeholder="username">
-		<br> <br>
-		<input type="password" name="password" id="password" placeholder="password">
-		<br> <br>
-		<input type="submit" value="Login">
-		<input type="button" value="Sign-Up" id="signup-button" onclick="window.location.href='http://localhost:8000/signup';">
-	</form>
+	<div id="frm">
+		<form action="http://localhost:8000/auth" method="post">
+			<div id="username">
+				<input type="text" name="username" placeholder="username">
+			</div>
+			<div id="password">
+				<input type="password" name="password" placeholder="password">
+			</div>
+			<div>
+				<input type="submit" value="Login">
+				<input type="button" value="Sign-Up" id="signup-button"
+					onclick="window.location.href='http://localhost:8000/signup';">
+			</div>
+		</form>
+	</div>
 </body>
 
 </html>
